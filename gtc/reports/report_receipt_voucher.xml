@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+	<template id="gtc.report_receipt_voucher">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<!--<t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />
+				<t t-set="partner" t-value="o.partner_id or (o.move_lines and o.move_lines[0].partner_id) or False"/>
+				<t t-if="partner" name="partner_header">
+					<t t-set="address">
+						<div t-esc="partner"
+						t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
+				   </t>
+				</t>-->
+
+				<div class="header">
+					<div class="o_boxed_header" style="border-bottom: 0; margin-bottom: 0; padding-bottom: 0;">
+						<div class="row mb8">
+						<table class="table table-bordered">
+							<tbody>
+							<tr>
+								<td width="20%" style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;" rowspan="2">
+									<img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="width: auto; height: auto;  max-height: 100px;" alt="Logo"/>
+								</td>
+								<td class="text-center">
+									Gulf Tunneling Company - LLC
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+								Receipt Voucher
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="page article o_report_layout_boxed">
+					<div class="row align-center">
+						<div class="col-6 text-left">
+							<span class="font-weight-bold">Date:</span> 
+							<t t-if="o.state == 'done'">
+								<span t-field="o.date_done"/>
+							</t>
+							<t t-if="o.state != 'done'">
+								 <span t-field="o.scheduled_date"/>
+							</t>
+						</div>
+						<div class="col-6 text-right">
+							<span class="font-weight-bold">Voucher No:</span> <span t-field="o.name"/>
+						</div>
+					</div>
+
+					<table class="table table-sm mt48" t-if="o.state!='done'">
+						<thead>
+							<tr>
+								<th><strong>Product</strong></th>
+								<th><strong>Quantity</strong></th>
+							</tr>
+						</thead>
+						<tbody>
+							<t t-set="lines" t-value="o.move_lines.filtered(lambda x: x.product_uom_qty)"/>
+							<tr t-foreach="lines" t-as="move">
+								<td>
+									<span t-field="move.product_id"/>
+									<span t-field="move.product_id.sudo().description_pickingin"/>
+								</td>
+								<td>
+									<span t-field="move.product_uom_qty"/>
+									<span t-field="move.product_uom"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-sm mt48" t-if="o.move_line_ids and o.state=='done'">
+						<t t-set="has_serial_number" t-value="o.move_line_ids.mapped('lot_id')" />
+						<thead>
+							<tr>
+								<th class="text-center"><strong>Quantity</strong></th>
+								<th class="text-center"><strong>Unit</strong></th>
+								<th class="text-center"><strong>item Description</strong></th>
+								<th class="text-center"><strong>Part No.</strong></th>
+								<th class="text-center"><strong>Supplier Name</strong></th>
+								<th class="text-center"><strong>Card No.</strong></th>
+								<th class="text-center"><strong>Delivery Note No.</strong></th>
+								<th class="text-center"><strong>Invoice No.</strong></th>
+								<th class="text-center"><strong>PR No.</strong></th>
+								<th class="text-center"><strong>Location</strong></th>
+								<th class="text-center"><strong>Remarks</strong></th>
+								<th name="lot_serial" t-if="has_serial_number" groups="stock.group_lot_on_delivery_slip">
+									Lot/Serial Number
+								</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr t-foreach="o.move_line_ids" t-as="move_line">
+								<td class="text-center">
+									<span t-field="move_line.qty_done"/>
+								</td>
+								<td class="text-center">
+									<span t-field="move_line.product_uom_id"/>
+								</td>
+								<td class="text-left">
+									<span t-field="move_line.product_id.sudo().name"/>
+									<span t-field="move_line.product_id.sudo().description_pickingin"/>
+								</td>
+								<td class="text-center">
+									<span t-field="move_line.product_id.sudo().part_no"/>
+								</td>
+								<td class="text-center">
+									<span t-field="o.partner_id"/>
+								</td>
+								<td class="text-center">
+									<span t-field="move_line.product_id.sudo().default_code"/>
+								</td>
+								<td class="text-center">
+									<span t-field="o.origin"/>
+								</td>
+								<td class="text-center">
+									<span t-field="o.purchase_id.sudo().partner_ref"/>
+								</td>
+								<td class="text-center">
+									<span t-field="o.purchase_id"/>
+								</td>
+								<td class="text-center">
+									<span t-field="move_line.location_dest_id"/>
+								</td>
+								<td class="text-center">
+									<span t-field="move_line.remark"/>
+								</td>
+								<td t-if="has_serial_number and move_line.lot_name" groups="stock.group_lot_on_delivery_slip">
+									<span t-field="move_line.lot_name"/>
+								</td>
+								<td t-else="" groups="stock.group_lot_on_delivery_slip">
+									<span t-field="move_line.lot_id.name"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="row">
+						<div class="col-12">
+							Note: Received the material above and added to inventory
+						</div>
+					</div>
+					<p>
+						<t t-if="o.backorder_ids and o.backorder_ids.filtered(lambda x: x.state not in ('done', 'cancel'))">
+							All items couldn't be shipped, the remaining ones will be shipped as soon as they become available.
+						</t>
+					</p>
+				</div>
+
+				<div class="footer">
+					<div class="row mb-5">
+						<div class="col-6 text-center">
+							<div class="col-4">
+								<div class="pb-1 mb-1" style="border-bottom: 1px dashed black">Received By:</div>
+								<div class="font-weight-bold">StoreKeeper</div>
+							</div>
+						</div>
+						<div class="col-6 text-center">
+							<div class="col-4" style="margin-left: auto;">
+								<div class="pb-1 mb-1" style="border-bottom: 1px dashed black">Received From:</div>
+								<div class="font-weight-bold">Purchasing Dept</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-5 pb-5 o_report_layout_boxed">
+						<table style="width: 100%; border-collapse: collapse; border: 0.0355rem solid black;  margin-top: 0.25rem;">
+							<tbody>
+								<tr style="font-size: 0.875rem; text-align: center;">
+									<td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Form No: GTC-ST-F-01
+									</td>
+									<td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Rev: 02
+									</td>
+									<td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Date: 11.02.2012
+									</td>
+									<td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Page: <span class="page"/> / <span class="topage"/>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</t>
+		</t>
+	</template>
+
+
+	<!--><template id="report_deliveryslip">
+
+		<t t-foreach="docs" t-as="o">
+			<t t-call="gtc.report_delivery_document" t-lang="o.partner_id.lang"/>
+		</t>
+
+	</template><!-->
+
+	 <report
+			string="Receipt Voucher"
+			id="action_report_receipt"
+			model="stock.picking"
+			report_type="qweb-pdf"
+			name="gtc.report_receipt_voucher"
+			file="gtc.report_receipt_voucher"
+			paperformat="landscape_paperformat"
+			print_report_name="'Receipt Voucher - %s - %s' % (object.partner_id.name or '', object.name)"/>
+</odoo>

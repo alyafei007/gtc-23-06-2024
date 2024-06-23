@@ -1,0 +1,2179 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* vehicle_as_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-21 14:04+0000\n"
+"PO-Revision-Date: 2018-07-21 14:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "&amp;bull;"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "&amp;nbsp;<span>on</span>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1985"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1986"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1987"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1988"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1989"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1990"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1991"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1992"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1993"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1994"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1995"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1996"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1997"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1998"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "1999"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2000"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2001"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2002"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2003"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2004"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2005"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2006"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2007"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2008"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2009"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2010"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2011"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2012"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2013"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2014"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2015"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2016"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2017"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2018"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,model_year:0
+msgid "2019"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "<span attrs=\"{'invisible':[('base', '!=', 'list_price')]}\">Public Price  -  </span>\n"
+"                            <span attrs=\"{'invisible':[('base', '!=', 'standard_price')]}\">Cost  -  </span>\n"
+"                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Other Pricelist  -  </span>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "<span>kW</span>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document_with_payments
+msgid "<strong>Amount Due</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "<strong>Customer Code:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Date Ordered:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "<strong>Description:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "<strong>Due Date:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Expiration Date:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "<strong>Invoice Date:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Payment Terms:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Quotation Date:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "<strong>Reference:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Salesperson:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Shipping address:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "<strong>Source:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Subtotal: </strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Subtotal</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "<strong>Your Reference:</strong>"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_pricelist_action2
+msgid "A price list contains rules to be evaluated in order to compute\n"
+"                the sale price of the products."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.account_account_menu_vehicle
+msgid "Accounting"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_vehicle_accounting_report
+msgid "Accounting Reports"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Add Credit Note"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_car_template_action
+#: model:ir.ui.menu,name:vehicle_as_product.all_product_car
+msgid "All Vehicles"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Amount"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_view
+msgid "Applicable On"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_view_search
+msgid "Archived"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+msgid "Attributes"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,transmission:0
+msgid "Automatic"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_auto_generated
+msgid "Automatically Generated"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_account_report_bs_vehicle
+msgid "Balance Sheet"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_action_account_bank_journal_form_vehicle
+msgid "Bank Accounts"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_vehicle_model_class_brand
+msgid "Brand of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "CLass"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_co2
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_co2
+msgid "CO2 Emissions"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_co2
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_co2
+msgid "CO2 emissions of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+msgid "Can be Purchased"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+msgid "Can be Sold"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_create_car_order_poup_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Cancel"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "Cancelled Invoice"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.sale_car_order_view_search_inherit_quotation
+msgid "Cars Quotations"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.sale_car_order_view_search_inherit_quotation
+msgid "Cars Quotations Sent"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.sale_car_order_view_search_inherit_quotation
+msgid "Cars Sales"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.action_car_orders
+msgid "Cars Sales Orders"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_service_type_category
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Category"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_cost_type
+msgid "Category of the cost"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_action_account_form_vehicle
+msgid "Chart of Accounts"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_kanban_view
+msgid "Chassis #:"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_account_invoice_line_vin_sn
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_vin_sn
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_vin_sn
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_vin_sn
+#: model:ir.model.fields,field_description:vehicle_as_product.field_sale_order_line_vin_sn
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Chassis Number"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_service_type_category
+msgid "Choose whether the service refer to contracts, vehicle services or both"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_class_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_class_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_id
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_class_view_tree
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_view_form
+msgid "Class"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_name
+msgid "Class name"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_vehicle_model_class
+msgid "Class of a vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_class_id
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_class_id
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_class_id
+msgid "Class of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.action_invoice_car_tree1
+msgid "Click to create a customer invoice."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_image_name_action
+msgid "Click to create a image name."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_class_model_action
+msgid "Click to create a new class."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_costs_action
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_costs_action_s
+msgid "Click to create a new cost."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_model_brand_action
+msgid "Click to create a new make."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_model_action
+msgid "Click to create a new model."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_service_types_action
+msgid "Click to create a new type of service."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_pricelist_action2
+msgid "Click to create a pricelist."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_state_action
+msgid "Click to create a vehicle location."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_car_template_action
+msgid "Click to define a new product."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_car_emplate_action_all
+#: model:ir.actions.act_window,help:vehicle_as_product.product_car_normal_action
+#: model:ir.actions.act_window,help:vehicle_as_product.product_car_template_action_all
+msgid "Click to define a new vehicle."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_clients
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_clients
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_clients
+#: model:ir.ui.view,arch_db:vehicle_as_product.fleet_vehicle_model_view_form
+msgid "Client Interested"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_clients_count
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_clients_count
+msgid "Clients"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_tag_color
+msgid "Color Index"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "Compute Price"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.product_configuration
+msgid "Configuration"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Confirm Sale"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.service.type,category:0
+#: selection:product.vehicle.cost,cost_type:0
+msgid "Contract"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_cost
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_cost
+msgid "Cost"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_description
+msgid "Cost Description"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_form
+msgid "Cost Details"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+msgid "Cost Subtype"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+msgid "Cost Type"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_vehicle_cost
+msgid "Cost related to a vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_cost_cost_subtype_id
+msgid "Cost type purchased with this cost"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_cost_count
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_cost_count
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Costs"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Create Invoice"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.action_car_orders
+#: model:ir.actions.act_window,help:vehicle_as_product.action_car_quotations
+msgid "Create a Quotation, the first step of a new sale."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_popup_message_wizard_create_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_service_type_create_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_create_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_image_name_create_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_create_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_create_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_create_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_state_create_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_tag_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_popup_message_wizard_create_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_service_type_create_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_create_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_image_name_create_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_create_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_create_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_create_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_state_create_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_tag_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "Credit Note"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_state_id
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_state_id
+msgid "Current state of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_create_car_order_poup_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Customer"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.action_invoice_car_tree1
+#: model:ir.ui.menu,name:vehicle_as_product.menu_action_invoice_car_tree
+msgid "Customer Invoices"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.res_partner_menu_crm
+msgid "Customers"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_date
+msgid "Date"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_cost_date
+msgid "Date when the cost has been executed"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_acquisition_date
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_acquisition_date
+msgid "Date when the vehicle has been immatriculated"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Description"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Description for Customers"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Description for Internal"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,fuel_type:0
+msgid "Diesel"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Disc.(%)"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_popup_message_wizard_display_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_service_type_display_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_display_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_image_name_display_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_display_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_display_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_display_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_state_display_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_tag_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_doors
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_doors
+msgid "Doors Number"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Draft Credit Note"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "Draft Invoice"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_pricelist_action2
+msgid "Each rule include a set of applicability criteria (date range,\n"
+"                product category...) and a computation that easily helps to achieve\n"
+"                any kind of pricing."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_service_types_action
+msgid "Each service can used in contracts, as a standalone service or both."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+msgid "Effective Costs"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,fuel_type:0
+msgid "Electric"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_graph
+msgid "Expenses Per Month"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_create_car_order_poup_form
+msgid "Expiration Date"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_cost_cost_type
+msgid "For internal purpose only"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.vehicle.cost,cost_type:0
+msgid "Fuel"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_fuel_type
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_fuel_type
+msgid "Fuel Type"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_fuel_type
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_fuel_type
+msgid "Fuel Used by the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Future Activities"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,fuel_type:0
+msgid "Gasoline"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "General Information"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_class_view_search
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_view_search
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_order_line_filter
+msgid "Group By"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_horsepower
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_horsepower
+msgid "Horsepower"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_horsepower_tax
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_horsepower_tax
+msgid "Horsepower Taxation"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,fuel_type:0
+msgid "Hybrid"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_popup_message_wizard_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_service_type_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_image_name_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_id_4536
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_id_4525
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_state_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_tag_id
+msgid "ID"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "If the sale is locked, you can not modify it anymore. However, you will still be able to invoice or deliver."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_image_name_view_tree
+msgid "Image Name"
+msgstr ""
+
+#. module: vehicle_as_product
+#: sql_constraint:product.vehicle.image.name:0
+msgid "Image name already exists"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Images"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_cost_ids
+msgid "Included Services"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+msgid "Indicative Costs"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_insurance_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_insurance_date
+msgid "Insurance Until"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Intreseted Clients"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Inventory"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_account_invoice
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "Invoice"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_account_invoice_line
+msgid "Invoice Line"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Invoice Lines"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Invoice Number:"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.report,name:vehicle_as_product.account_invoices_car
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Invoices"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.report,name:vehicle_as_product.account_invoices_car_without_payment
+msgid "Invoices without Payment"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Invoicing"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Invoicing address:"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Invoicing and shipping address:"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_account_invoice_line_its_car
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_its_car
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_its_car
+msgid "Its Car"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_action_account_journal_form_vehicle
+msgid "Journals"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_vehicle_search
+msgid "Just Vehicles"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,odometer_unit:0
+msgid "Kilometers"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_popup_message_wizard___last_update
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_service_type___last_update
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost___last_update
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_image_name___last_update
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model___last_update
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class___last_update
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand___last_update
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_state___last_update
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_tag___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_account_invoice_line_odometer
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_odometer
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_odometer
+#: model:ir.model.fields,field_description:vehicle_as_product.field_sale_order_line_odometer
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Last Odometer"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_popup_message_wizard_write_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_service_type_write_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_write_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_image_name_write_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_write_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_write_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_write_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_state_write_uid
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_tag_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_popup_message_wizard_write_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_service_type_write_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_write_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_image_name_write_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_write_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_write_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_write_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_state_write_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_tag_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Late Activities"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_license_plate
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_license_plate
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "License Plate"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_kanban_view
+msgid "License Plate:"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_license_plate
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_license_plate
+msgid "License plate number of the vehicle (i = plate number for a car)"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_state_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_state_id
+msgid "Location"
+msgstr ""
+
+#. module: vehicle_as_product
+#: sql_constraint:product.vehicle.state:0
+msgid "Location name already exists"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Lock"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_image
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_image
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_image
+msgid "Logo"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_image_medium
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_image_medium
+msgid "Logo (medium)"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_image_small
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_image_small
+msgid "Logo (small)"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_brand_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_brand_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_brand_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_name
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_class_view_search
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_view_search
+msgid "Make"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_brand_id
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_brand_id
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_brand_id
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_class_brand_id
+msgid "Make of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,transmission:0
+msgid "Manual"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "Max. Margin"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_image_medium
+msgid "Medium-sized image"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_class_brand_image_medium
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_class_image_medium
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_image_medium
+msgid "Medium-sized logo of the brand. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_popup_message_wizard_name
+#: model:ir.ui.view,arch_db:vehicle_as_product.popup_message_wizard
+msgid "Message"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.template,odometer_unit:0
+msgid "Miles"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "Min. Margin"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_model_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_model_id
+#: model:ir.ui.view,arch_db:vehicle_as_product.fleet_vehicle_model_view_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Model"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_model_make
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_brand_view_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_brand_view_tree
+msgid "Model Make"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_account_invoice_line_model_year
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_model_year
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_model_year
+#: model:ir.model.fields,field_description:vehicle_as_product.field_sale_order_line_model_year
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Model Year"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_name
+msgid "Model name"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_vehicle_model
+msgid "Model of a vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_model_id
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_model_id
+msgid "Model of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_clients_view_tree
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_view_tree
+msgid "Models"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+msgid "Month"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "My Activities"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "My Orders"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_order_line_filter
+msgid "My Sales Order Lines"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_service_type_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_image_name_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_state_name
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_tag_name
+msgid "Name"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "New Price ="
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Notes"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_doors
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_doors
+msgid "Number of doors of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_seats
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_seats
+msgid "Number of seats of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.popup_message_wizard
+msgid "OK"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Odometer"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_account_invoice_line_odometer_unit
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_odometer_unit
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_odometer_unit
+#: model:ir.model.fields,field_description:vehicle_as_product.field_sale_order_line_odometer_unit
+msgid "Odometer Unit"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_account_invoice_line_odometer
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_odometer
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_odometer
+#: model:ir.model.fields,help:vehicle_as_product.field_sale_order_line_odometer
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_costs_action
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_costs_action_s
+msgid "Odoo helps you managing the costs for your different\n"
+"                vehicles. Expenses are created automatically from services,\n"
+"                contracts (fixed or recurring) and fuel logs."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.action_invoice_car_tree1
+msgid "Odoo's electronic invoicing allows to ease and fasten the\n"
+"                collection of customer payments. Your customer receives the\n"
+"                invoice by email and he can pay online and/or import it\n"
+"                in his own system."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.action_car_orders
+msgid "Once the quotation is confirmed, it becomes a sales order.\n"
+"                    You'll be able to invoice it and collect payments.\n"
+"                    From the <i>Sales Orders</i> menu, you can track delivery\n"
+"                    orders or services."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_order_line_filter
+msgid "Order"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Order #"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Order Month"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.vehicle.cost,cost_type:0
+msgid "Other"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Other Info"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Other Information"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_owner_id
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_owner_id
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Owner"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Owner :"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_owner_id
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_owner_id
+msgid "Owner of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Packaging"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document_with_payments
+msgid "Paid on"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_parent_id
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+msgid "Parent"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_cost_parent_id
+msgid "Parent cost to this current cost"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Payables"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_power
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_power
+msgid "Power"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_power
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_power
+msgid "Power in kW of the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Price"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "Price Computation"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_kanban_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Price:"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Pricelist"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_tree_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_view
+msgid "Pricelist Items"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_pricelist_action2
+msgid "Pricelists"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Pricing"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Print"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Print Invoice"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "Product"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Product Images"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "Product Variant"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_car_normal_action
+msgid "Product Variants"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_view_search
+msgid "Products Price"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_view_tree
+msgid "Products Price List"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_view_search
+msgid "Products Price Search"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_account_report_pl_vehicle
+msgid "Profit and Loss"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Purchasing price"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.sale_action_quotations_new
+#: model:ir.model,name:vehicle_as_product.model_sale_order
+msgid "Quotation"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Quotation #"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.report,name:vehicle_as_product.action_report_vehicle_saleorder
+msgid "Quotation / Order"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.action_car_quotations
+#: model:ir.ui.menu,name:vehicle_as_product.menu_sale_car_quotations
+msgid "Quotations"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Receivables"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Register Payment"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_acquisition_date
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_acquisition_date
+msgid "Registration Until"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_vehicle_report
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Reporting"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Reset to Draft"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "Rounding Method"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_vehicle_order
+msgid "Sale Orders"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.sale_car_order_view_search_inherit_sale
+msgid "Sales"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_vehicle_search
+msgid "Sales Analysis"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Sales Channel"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Sales Information"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Sales Order"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.action_vehicle_sale_list
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_line_tree
+msgid "Sales Order Lines"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_order_line_filter
+msgid "Sales Order Lines ready to be invoiced"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_order_line_filter
+msgid "Sales Order Lines related to a Sales Order of mine"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_vehicle_sale_report
+msgid "Sales Report"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_order_line_filter
+msgid "Salesperson"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Search Cars Sales Order"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_order_line_filter
+msgid "Search Sales Order"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_seats
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_seats
+msgid "Seats Number"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_create_car_order_poup_form
+msgid "Sell Car"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.action_sale_car_order_poup
+msgid "Sell Vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_create_car_order_poup_form
+msgid "Sell a Car"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Send PRO-FORMA Invoice"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Send by Email"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_state_sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: vehicle_as_product
+#: selection:product.service.type,category:0
+msgid "Service"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+#: selection:product.vehicle.cost,cost_type:0
+msgid "Services"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Set to Quotation"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Setup default terms and conditions in your sales settings ..."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Show all records which has next action date is before today"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_brand_image_small
+msgid "Small-sized image"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_class_brand_image_small
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_class_image_small
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_image_small
+msgid "Small-sized logo of the brand. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "Source Document"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_state_view_tree
+msgid "State"
+msgstr ""
+
+#. module: vehicle_as_product
+#: sql_constraint:product.vehicle.tag:0
+msgid "Tag name already exists !"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_tag_ids
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_tag_ids
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Tags"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_action_tax_form_vehicle
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Taxes"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Terms and conditions..."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_item_form_view
+msgid "The computed price is expressed in the default Unit of Measure of the product."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.action_invoice_car_tree1
+msgid "The discussions with your customer are automatically displayed at\n"
+"                the bottom of each invoice."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_car_template_action
+msgid "The product form contains information to simplify the sale process: price, notes in the quotation, accounting data, procurement methods, etc."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_car_normal_action
+msgid "The vehicle form contains information to simplify the sale\n"
+"            process: price, notes in the quotation, accounting data,\n"
+"            procurement methods, etc."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_class_brand_image
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_class_image
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_model_image
+msgid "This field holds the image used as logo for the brand, limited to 1024x1024px."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "This note is only for internal purposes."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "This note will show up on sales orders."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.sale_car_order_view_search_inherit_sale
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_order_line_filter
+msgid "To Invoice"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Today Activities"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_line_tree
+msgid "Total"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_amount
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_vehicle_saleorder_document
+msgid "Total Price"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_product_transmission
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_template_transmission
+msgid "Transmission"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_transmission
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_transmission
+msgid "Transmission Used by the vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_cost_subtype_id
+msgid "Type"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_service_type
+msgid "Type of services available on a vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_account_invoice_line_vin_sn
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_vin_sn
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_vin_sn
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_cost_vin_sn
+#: model:ir.model.fields,help:vehicle_as_product.field_sale_order_line_vin_sn
+msgid "Unique number written on the vehicle motor (VIN/SN number)"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "Unit Price"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_account_invoice_line_odometer_unit
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_odometer_unit
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_odometer_unit
+#: model:ir.model.fields,help:vehicle_as_product.field_sale_order_line_odometer_unit
+msgid "Unit of the odometer "
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Unlock"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_car_order_filter
+msgid "Unread Messages"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.sale_car_order_view_search_inherit_sale
+msgid "Upselling"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_state_sequence
+msgid "Used to order the note stages"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_action_res_users_vehicle
+msgid "Users"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "Validate"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Variant Prices"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_cost_vehicle_id
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_tree_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_sales_order_line_filter
+msgid "Vehicle"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_vehicle_class_model_action
+#: model:ir.ui.menu,name:vehicle_as_product.product_vehicle_class_model_menu
+msgid "Vehicle Class"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_cost_view_tree
+msgid "Vehicle Costs"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+msgid "Vehicle Costs by Month"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.product_vehicle_costs_menu
+msgid "Vehicle Expence Report"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_vehicle_costs_action
+#: model:ir.actions.act_window,name:vehicle_as_product.product_vehicle_costs_action_s
+msgid "Vehicle Expense Report"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_vehicle_service_types_action
+#: model:ir.ui.menu,name:vehicle_as_product.product_vehicle_service_types_menu
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_service_types_view_tree
+msgid "Vehicle Expenses"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_vehicle_image_name_action
+#: model:ir.ui.menu,name:vehicle_as_product.product_vehicle_image_name_menu
+msgid "Vehicle Image Name"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_vehicle_state_action
+#: model:ir.ui.menu,name:vehicle_as_product.product_vehicle_state_menu
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Vehicle Location"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_vehicle_model_brand_action
+#: model:ir.ui.menu,name:vehicle_as_product.product_vehicle_model_brand_menu
+msgid "Vehicle Make"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_vehicle_clients_model_action
+#: model:ir.actions.act_window,name:vehicle_as_product.product_vehicle_model_action
+#: model:ir.ui.menu,name:vehicle_as_product.product_vehicle_model_menu
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Vehicle Model"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "Vehicle Order Lines"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_sale_car_order
+msgid "Vehicle Orders"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.menu_vehicle_sale
+msgid "Vehicle Sale"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_product_vehicle_cost_vehicle_id
+msgid "Vehicle concerned by this log"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,name:vehicle_as_product.product_car_emplate_action_all
+#: model:ir.actions.act_window,name:vehicle_as_product.product_car_template_action_all
+#: model:ir.ui.menu,name:vehicle_as_product.product_car
+#: model:ir.ui.menu,name:vehicle_as_product.vehicle_configuration
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_search_view
+msgid "Vehicles"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_cost_indicative_view_graph
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_cost_indicative_view_pivot
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_cost_view_graph
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_cost_view_pivot
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+msgid "Vehicles Expenses"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.menu,name:vehicle_as_product.vehicle_management
+msgid "Vehicles Management"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_class_view_search
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_view_search
+msgid "Vehicles costs"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "Vendor Bill"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.report_invoice_car_document
+msgid "Vendor Credit Note"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,field_description:vehicle_as_product.field_product_vehicle_model_class_vendors
+msgid "Vendors"
+msgstr ""
+
+#. module: vehicle_as_product
+#: code:addons/vehicle_as_product/models/sale.py:145
+#, python-format
+msgid "Warning for %s"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "Website"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_costs_view_search
+msgid "Year"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model.fields,help:vehicle_as_product.field_account_invoice_line_model_year
+#: model:ir.model.fields,help:vehicle_as_product.field_product_product_model_year
+#: model:ir.model.fields,help:vehicle_as_product.field_product_template_model_year
+#: model:ir.model.fields,help:vehicle_as_product.field_sale_order_line_model_year
+msgid "Year of the model"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_state_action
+msgid "You can customize available location to track the location of\n"
+"            each vehicle. Example: Active, Being Repaired, Sold."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_class_model_action
+msgid "You can define several classes (e.g. 221, 500) for each make (Audi)."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_vehicle_model_action
+msgid "You can define several models (e.g. A3, A4) for each make (Audi)."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "You have"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_car_template_action
+msgid "You must define a product for everything you sell, whether it's a physical product, a consumable or a service you offer to customers."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.product_car_normal_action
+msgid "You must define a vehicle for everything you sell, whether it's\n"
+"            a physical vehicle, a consumable or a service you offer to\n"
+"            customers."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.actions.act_window,help:vehicle_as_product.action_car_quotations
+msgid "Your next actions should flow efficiently: confirm the Quotation\n"
+"                to a Sales Order, then create the Invoice and collect the Payment."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.view_order_car_form
+msgid "days"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.fleet_vehicle_model_view_form
+msgid "e.g. Class S"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.fleet_vehicle_model_view_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_view_form
+msgid "e.g. Model S"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.fleet_vehicle_model_view_form
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_vehicle_model_view_form
+msgid "e.g. Tesla"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_pricelist_view
+msgid "e.g. USD Retailers"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "eCommerce Categories"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "for this customer. You can allocate them to mark this invoice as paid."
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.invoice_car_form
+msgid "outstanding payments"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_popup_message_wizard
+msgid "popup.message.wizard"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_image
+msgid "product.image"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_vehicle_image_name
+msgid "product.vehicle.image.name"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_vehicle_state
+msgid "product.vehicle.state"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.model,name:vehicle_as_product.model_product_vehicle_tag
+msgid "product.vehicle.tag"
+msgstr ""
+
+#. module: vehicle_as_product
+#: model:ir.ui.view,arch_db:vehicle_as_product.product_car_template_form_view
+msgid "show all the costs for this vehicle"
+msgstr ""

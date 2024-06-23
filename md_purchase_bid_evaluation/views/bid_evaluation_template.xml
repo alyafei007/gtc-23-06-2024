@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_bid_evaluation">
+		
+            <t t-call="web.html_container">
+        	<t t-foreach="docs" t-as="o">
+           <!--  <t t-call="web.external_layout"> -->
+            <div class="header">
+                <div class="row mb-0 o_report_layout_boxed">
+                    <table class="table table-sm o_main_table">
+                    <tbody>
+                        <tr>
+                            <td width="20%" rowspan="2">
+                                <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="max-height: 45px;" alt="Logo"/>
+                            </td>
+                            <td class="text-center">
+                                <h6 class="font-weight-bold">Gulf Tunneling Company - LLC</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                P.O Box 73622, ICAD-1, Mussafah, Abu Dhabi, UAE <br />
+                                Tel: +971-2-25503327, Fax: +971-2-5503358 <br />
+                                Email: gulftunn@emirates.net.ae, Website: www.gulf-tunneling.com
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <div class="row align-middle">
+                   
+                    <div class="col-12 text-center">Bid Evaluation</div>
+                </div>
+            </div> 
+
+            <t t-set="o" t-value="o.with_context({'lang':o.user_id.partner_id.lang})"/>
+            <div class="page">            
+            	<div class="oe_structure" />
+            	
+            	<table class="col-12" width="1700" style="border:1px black solid;">
+            		<tr>
+            			<th> <span>Requesting Dept</span></th>
+            			<th> <span>Operation</span></th>
+            			<th> <span>PR No.</span></th>
+            			<th> <span>OP 490</span></th>
+            			<th> <span>Project No.</span></th>
+            			<th> <span>O-12733</span></th>
+            			<th> <span>Reqd. Date</span></th>
+            			<th> <span>07/10/2019</span></th>
+            			<th> <span>Date</span></th>
+            			<th> <span>10/07/2019</span></th>
+            		</tr>            	
+            	</table>
+            	<br/>            	
+            	 <!-- <div class="row col-12 ">
+            	 	 <div class="col-6" style="padding-left:0mm;padding-right:0mm;"> -->
+          	 	 <table class="col-12" width="1700" style="border:1px black solid;">
+          	 	 	<tr>
+          	 	 		<td>
+		            	 <table width="800" class="table table-sm o_main_table">
+		            	 	<thead>
+			            		<tr>
+			            			<td>Item No.</td>
+			            			<td>Description</td>
+			            			<td>Item Code</td>
+			            			<td>Last Unit Price</td>
+			            			<td>Qty</td>
+			            			<td>Unit</td>	            			
+			            		</tr>
+			            	</thead>
+		            		<t t-set="i" t-value="6"/>        	
+		            		<t t-foreach="range(i)" t-as="object">
+		            		<tr>
+		            			<tbody>
+			            			<td><span t-field="object"></span></td>
+			            			<td>Product Description</td>
+			            			<td>C123</td>
+			            			<td>70</td>
+			            			<td>1</td>
+			            			<td>m</td>     
+		            			</tbody>		
+		            		</tr>
+		            		</t>           	
+	            		</table> 
+	            		</td>
+            		
+	            	<!-- </div> -->
+	            	<td style="border-left: thin solid;">
+	            	<!-- <div class="col-6" style="padding-right:0mm;padding-left:0mm;"> -->
+	            		<table width="850" class="table table-sm o_main_table">
+	      					<tr>
+	      						<td><span >Supplier 1</span></td>   
+	      						<td><span >Supplier 2</span></td>   
+	      						<td><span >Supplier 3</span></td>      						
+	      					</tr>
+	            			<tr>
+	      						<td><span >Name</span></td>   
+	      						<td><span >Name</span></td>   
+	      						<td><span >Name</span></td>      						
+	      					</tr>	
+	       					<tr>
+	       						<td>
+	       							<table width="265" style="padding-right:0mm;padding-left:0mm;text-align:center;">
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span>Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span>Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       							</table>
+	       						</td>
+	       						<td style="border-left: thin solid;border-right: thin solid;">
+	       							<table width="265" style="padding-right:0mm;padding-left:0mm;text-align:center;">
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span>Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span>Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       							</table>
+	       						</td>
+	       						<td>
+	       							<table width="270" style="padding-right:0mm;padding-left:0mm;text-align:center;">
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span>Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span>Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       								<tr>
+	       									<td class="text-center"  style="border-bottom: thin solid;">
+	       										<span style="visibility:hidden;">Unit Price</span>	       										
+	       									</td>
+	       									<td class="text-center"  style="border-bottom: thin solid;border-left: thin solid;">
+	       										<span style="visibility:hidden;">Total Amt.</span>	       										
+	       									</td>
+	       								</tr>
+	       							</table>
+	       						</td>
+	       					</tr>    					           					
+       					</table>
+   					</td>
+				</tr>
+				</table>
+            	<table class="col-12" width="1700" style="border:1px black solid;padding-top:0mm;">
+            		<tr>
+          	 	 		<td>
+		            	 	<table width="800" style="padding-left:0mm;padding-right:0mm;">
+			            		<tr>
+			            			<td style="border-bottom: thin solid;">
+			            				<span>Total Amount:</span>
+			            			</td>			            			
+			            		</tr> 
+			            		<tr>
+			            			<td style="border-bottom: thin solid;">
+			            				<span>VAT:</span>
+			            			</td>            			
+			            		</tr> 
+			            		<tr>
+			            			<td style="border-bottom: thin solid;">
+			            				<span>Freight:</span>
+			            			</td>            			
+			            		</tr> 
+			            		<tr>
+			            			<td style="border-bottom: thin solid;">
+			            				<span>Others:</span>
+			            			</td>            			
+			            		</tr>   
+			            		<tr>
+			            			<td style="border-bottom: thin solid;">
+			            				<span>Grand Total:</span>
+			            			</td>            			
+			            		</tr>     
+			            		<tr>
+			            			<td>
+			            				<span>Remarks:</span>
+			            			</td>            			
+			            		</tr>            		    	
+            				</table>
+           				</td>
+           				<td style="border-left: thin solid;">
+            				<table width="850" style="padding-right:0mm;padding-left:0mm;">
+	      						<tr>
+		      						<td  style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-left: thin solid;border-right: thin solid;border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td  style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>      						
+	      						</tr>
+	      						<tr>
+		      						<td style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-left: thin solid;border-right: thin solid;border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>      						
+	      						</tr>
+	      						<tr>
+		      						<td style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-left: thin solid;border-right: thin solid;border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>      						
+	      						</tr>
+	      						<tr>
+		      						<td style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-left: thin solid;border-right: thin solid;border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>      						
+	      						</tr>
+	      						<tr>
+		      						<td style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-left: thin solid;border-right: thin solid;border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-bottom: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>      						
+	      						</tr>
+	      						<tr>
+		      						<td >
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td style="border-left: thin solid;border-right: thin solid;">
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>   
+		      						<td >
+		      							<span style="visibility:hidden;">Delivery to SIT </span>
+		      						</td>      						
+	      						</tr>
+      						</table>
+  						</td>
+					</tr>
+				</table>
+            	<table class="col-12" width="1700" style="border:1px black solid;padding-left:0mm;padding-right:0mm;">
+            		<tr>
+          	 	 		<td style="padding-left:0mm;padding-right:0mm;">
+		            	 	<table width="800" style="padding-left:0mm;padding-right:0mm;">
+			            		<tr>
+			            			<td style="border-bottom: thin solid;">
+			            				<span>Delivery Terms:</span>
+			            			</td>			            			
+			            		</tr> 
+			            		<tr>
+			            			<td style="border-bottom: thin solid;">
+			            				<span>Payment Terms:</span>
+			            			</td>            			
+			            		</tr> 
+			            		<tr>
+			            			<td >
+			            				<span>Delivery Period/Time:</span>
+			            			</td>            			
+			            		</tr> 
+			            		       		    	
+            				</table>
+           				</td>
+           				<td style="border-left: thin solid;padding-left:0mm;padding-right:0mm;">
+            				<table width="850" style="padding-right:0mm;padding-left:0mm;text-align:center;">
+	      						<tr>
+		      						<td style="border-bottom: thin solid;">
+		      							<span>Delivery to SIT</span>
+		      						</td>   
+		      						<td style="border-left: thin solid;border-right: thin solid;border-bottom: thin solid;">
+		      							<span>Delivery to SIT</span>
+		      						</td>   
+		      						<td style="border-bottom: thin solid;">
+		      							<span>Delivery to SIT</span>
+		      						</td>      						
+	      						</tr>
+	      						<tr>
+		      						<td style="border-bottom: thin solid;">
+		      							<span>CERDIT</span>
+		      						</td>   
+		      						<td style="border-left: thin solid;border-right: thin solid;border-bottom: thin solid;">
+		      							<span>CERDIT</span>
+		      						</td>   
+		      						<td style="border-bottom: thin solid;">
+		      							<span>CERDIT</span>
+		      						</td>      						
+	      						</tr>
+	      						<tr>
+		      						<td>
+		      							<span>As agreed</span>
+		      						</td>   
+		      						<td style="border-left: thin solid;border-right: thin solid;">
+		      							<span>As agreed</span>
+		      						</td>   
+		      						<td>
+		      							<span>As agreed</span>
+		      						</td>      						
+	      						</tr>
+      						</table>
+  						</td>
+					</tr>
+				</table>
+          		<br/>
+            	<table class="col-12" width="1700" style="border:1px black solid;">
+            		<tr>
+            			<td style="border-bottom: thin solid;">
+            				<span>Recommended Supplier : SAFEWAY</span>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td style="border-bottom: thin solid;">
+            				<span>Reasons for recommendation : Lowest price</span>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td style="border-bottom: thin solid;">
+            				<span><br/></span>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td style="border-bottom: thin solid;">
+            				<span><br/></span>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td style="border-bottom: thin solid;">
+            				<span>Remarks:</span>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				<span><br/></span>
+            			</td>
+            		</tr>
+            	</table>
+            	<br/>
+            	<table class="col-12" width="1700" style="border:1px black solid;">
+            		<tr>
+            			<td><span>Prepared by:</span></td>
+            			<td><span></span></td>
+            			<td><span>Noted by:</span></td>
+            			<td><span></span></td>
+            			<td><span>Approved by:</span></td>
+            			<td><span></span></td>
+            		</tr>
+            		
+           		     		
+            		<tr>
+            			<td><span>______________________</span></td>
+            			<td><span>________________</span></td>
+            			<td><span>______________________</span></td>
+            			<td><span>________________</span></td>
+            			<td><span>______________________</span></td>
+            			<td><span>________________</span></td>
+            		</tr>
+            		<tr>
+            			<td><span>Purchase Officer</span></td>
+            			<td><span>Date</span></td>
+            			<td><span>Finance Manager</span></td>
+            			<td><span>Date</span></td>
+            			<td><span>General Manager</span></td>
+            			<td><span>Date</span></td>
+            		</tr>
+           		</table>
+            </div>
+            <div class="footer">
+            	<div class="row">
+	            	<table width="1700" style="border:1px black solid;text-align:center;">
+	            		<tr>
+	            			<td width="25%"><span> Form No: GTC-PU-F-05</span></td>
+	            			<td width="25%" style="border-left: thin solid;"><span>Rev: 01</span></td>
+	            			<td width="25%" style="border-left: thin solid;"><span> Date:24.06.2015</span></td>
+	            			<td width="25%" style="border-left: thin solid;"><span>Page <span class="page"/> / <span class="topage"/></span></td>
+	            		</tr>
+	            	</table>
+            	</div>
+            </div>
+		</t>
+		</t>
+		
+	</template>
+</odoo>

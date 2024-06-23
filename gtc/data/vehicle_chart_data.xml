@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record model="account.account" id="vehucle_account_sales">
+         <field name="name">Vehicle Sales</field>
+         <field name="code">200100</field>
+         <field name="user_type_id" ref="account.data_account_type_revenue" />
+         <field name="reconcile" eval="True" />
+     </record>
+
+    <record id="vehucle_account_purchase" model="account.account">
+        <field name="code">200200</field>
+        <field name="name">Vehicle Purchase</field>
+        <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+        <field name="reconcile" eval="True" />
+    </record>
+
+    <record id="vehucle_account_expenses" model="account.account">
+        <field name="code">200300</field>
+        <field name="name">Vehicle Expenses</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        <field name="reconcile" eval="True" />
+    </record>
+
+    <record id="vehcile_category" model="product.category">
+        <field name="property_account_expense_categ_id" ref="vehucle_account_purchase"/>
+        <field name="property_account_income_categ_id" ref="vehucle_account_sales"/>
+        <field name="name">Vehicles</field>
+    </record>
+
+    <record id="account.account_financial_report_income0" model="account.financial.report">
+        <field name="name">Income</field>
+        <field name="sign" eval="-1" />
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account.account_financial_report_profitandloss0"/>
+        <field name="display_detail">detail_with_hierarchy</field>
+        <field name="type">account_type</field>
+        <field name="account_type_ids" eval="[(4,ref('account.data_account_type_other_income')), (4,ref('account.data_account_type_revenue'))]"/>
+    </record>
+
+    <record id="account.account_financial_report_expense0" model="account.financial.report">
+        <field name="name">Expense</field>
+        <field name="sign" eval="-1" />
+        <field name="sequence" eval="5"/>
+        <field name="parent_id" ref="account.account_financial_report_profitandloss0"/>
+        <field name="display_detail">detail_with_hierarchy</field>
+        <field name="type">account_type</field>
+        <field name="account_type_ids" eval="[(4,ref('account.data_account_type_expenses')), (4,ref('account.data_account_type_direct_costs')), (4,ref('account.data_account_type_depreciation'))]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_confirmation,access_sale_confirmation,model_sale_confirmation,base.group_user,1,1,1,1
+access_product_quantity,access_product_quantity,model_product_quantity,base.group_user,1,1,1,1
+access_product_task,access_product_task,model_product_task,base.group_user,1,1,1,1
+access_sale_discount,access_sale_discount,model_sale_discount,base.group_user,1,1,1,1
+access_crm_opportunity_name,access_crm_opportunity_name,model_crm_opportunity_name,base.group_user,1,1,1,1
+access_delivery_days,access_delivery_days,model_delivery_days,base.group_user,1,1,1,1
+access_product_attribute_sale_line,access_product_attribute_sale_line,model_product_attribute_sale_line,base.group_user,1,1,1,1
+access_order_line_attribute,access_order_line_attribute,model_order_line_attribute,base.group_user,1,1,1,1
+access_order_line_attribute_value,access_order_line_attribute_value,model_order_line_attribute_value,base.group_user,1,1,1,1
+access_product_attribute_order_line,access_product_attribute_order_line,model_product_attribute_order_line,base.group_user,1,1,1,1

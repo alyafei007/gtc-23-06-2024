@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="seq_trans_no" model="ir.sequence">
+            <field name="name">Transaction Number</field>
+            <field name="code">transaction.number</field>
+            <field name="active">TRUE</field>
+            <field name="prefix">Exp/%(range_year)s/</field>
+<!--            <field name="number_next">1</field>-->
+            <field name="number_increment">1</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="view_hr_expense_form" model="ir.ui.view">
+            <field name="name">hr.expense.view.form</field>
+            <field name="model">hr.expense</field>
+            <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+            <field name="arch" type="xml">
+
+                <field name="date" position="after">
+                    <field name="supplier_name" required="1"/>
+                    <field name="supplier_trn" required="1"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_hr_expense_sheet" model="ir.ui.view">
+            <field name="name">hr.expense.sheet.form</field>
+            <field name="model">hr.expense.sheet</field>
+            <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_form"/>
+            <field name="arch" type="xml">
+
+                <field name="name" position="before">
+                    <field name="trans_no" required="1"/>
+                </field>
+
+                <field name="employee_id" position="before">
+                    <field name="project_id" required="1"/>
+                </field>
+
+
+                <xpath expr="//form/sheet/notebook/page[@name='expenses']/field[@name='expense_line_ids']/tree/field[@name='name']"
+                       position="after">
+                    <field name="supplier_name"/>
+                    <field name="supplier_trn"/>
+                </xpath>
+
+                <xpath expr="//field[@name='analytic_account_id']" position="attributes">
+                    <attribute name="string">Analytic Account (Project)</attribute>
+                </xpath>
+
+                <xpath expr="//form/sheet/notebook/page[@name='expenses']/field[@name='expense_line_ids']/tree/field[@name='attachment_number']"
+                       position="replace"/>
+
+                <xpath expr="//form/sheet/notebook/page[@name='expenses']/field[@name='expense_line_ids']/tree/button[@name='action_get_attachment_view']"
+                       position="replace"/>
+            </field>
+        </record>
+    </data>
+</odoo>

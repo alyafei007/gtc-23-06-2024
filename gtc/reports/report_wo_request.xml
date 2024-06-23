@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+	<template id="gtc.report_wo_request">
+		<t t-call="web.html_container">
+			
+			<t t-foreach="docs" t-as="o">
+				<!--<t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />
+				<t t-set="partner" t-value="o.partner_id or (o.move_lines and o.move_lines[0].partner_id) or False"/>
+				<t t-if="partner" name="partner_header">
+					<t t-set="address">
+						<div t-esc="partner"
+						t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
+				   </t>
+				</t>-->
+
+				<div class="header">
+					<div class="o_boxed_header" style="border-bottom: 0; margin-bottom: 0; padding-bottom: 0;">
+						<div class="row mb8">
+						<table class="table table-bordered">
+							<tbody>
+							<tr>
+								<td width="20%" style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;" rowspan="2">
+									<img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="width: auto; height: auto;  max-height: 100px;" alt="Logo"/>
+								</td>
+								<td class="text-center">
+									Gulf Tunneling Company - LLC
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+								Work Order Request
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>
+					
+
+					<div class="row align-center">
+						<table style="width: 100%">
+  					<tbody>
+    					<tr>
+      					 <th scope="col" width="20%" style="text-align: left">Work Order No.</th>
+      					 <th scope="col" width="30%" style="text-align: left"><span t-field="o.name"/></th>
+      					 <th scope="col" width="30%" style="text-align: right">Equipment No.</th>
+      					 <th scope="col" width="20%" style="text-align: center"><span t-field="o.equipment_id"/></th>
+    				  </tr>
+  					</tbody>
+						</table>
+					</div>
+					<br/>
+					
+					<div class="row align-center">
+						<table style="width: 100%; border:1px solid black; border:1px solid black; text-align: left; vertical-align: middle;background-color:#000000;">
+						<tbody>
+							<tr>
+  						  <th>
+									 <font color="#ffffff">Request Details (To be filled up by the request party)</font>
+								</th>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+					<br/>
+					
+					<div class="row align-center">
+						<table style="width: 100%">
+  					<tbody>
+    					<tr>
+      					<th scope="col" width="20%" style="text-align: left">Priority level</th>
+      					 
+      					<th scope="col" width="20%" style="text-align: left">
+      					  <t t-if="o.priority == '3'">
+                    		<span>☑</span>
+   						  </t>
+   						    Emergency
+                		</th>
+                
+      					 <th scope="col" width="20%" style="text-align: left">
+      					   <t t-if="o.priority == '0'">
+      					     <span>☑</span>
+   						    </t>
+   						    Low
+   						    </th>
+   						    
+      					 <th scope="col" width="20%" style="text-align: left">
+      					   <t t-if="o.priority == '1'">
+      					     <span>☑</span>
+   						    </t>
+   						    Medium
+   						    </th>
+      					 
+      					 <th scope="col" width="20%" style="text-align: left">
+      					   <t t-if="o.priority == '2'">
+                    <span>☑</span>
+   						    </t>
+   						    High
+   						    </th>
+    				  </tr>
+  					</tbody>
+						</table>
+					</div>
+					<br/>
+					
+					<div class="row align-center">
+						<table style="width: 100%; border:1px solid black;">
+  					<tbody>
+    					<tr>
+      					 <th scope="col" width="25%" style="text-align: left;" colspan="4">Descreption of Work Requested/Problems:</th>
+    				  </tr>
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left"><span t-field="o.breakdown"/>Breakedown</th>
+      					 <th scope="col" width="25%" style="text-align: left"><span t-field="o.repair"/>Repair</th>
+      					 <th scope="col" width="25%" style="text-align: left"><span t-field="o.routine"/>Routine</th>
+      					 <th scope="col" width="25%" style="text-align: left"><span t-field="o.rework"/>Rework</th>
+    				  </tr>
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left"><span t-field="o.installation"/>Installation</th>
+      					 <th scope="col" width="25%" style="text-align: left"><span t-field="o.fabrication"/>Fabrication</th>
+      					 <th scope="col" width="25%" style="text-align: left"><span t-field="o.services"/>Services</th>
+      					 <th scope="col" width="25%" style="text-align: left"><span t-field="o.others"/>Others</th>
+    				  </tr>
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left" colspan="4"><span t-field="o.description"/></th>
+    				  </tr>
+  					</tbody>
+						</table>
+					</div>
+					<br/>
+					
+					<div class="row align-center">
+					<table style="width: 100%; border-collapse: collapse; border: 0.0355rem solid black;  margin-top:0.25rem;">
+						<tbody>
+							<tr style="font-size: 0.875rem; text-align: center;">
+								<td width="20%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Requested by:
+								</td>
+								<td width="20%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+									Approved bt:
+								</td>
+								<td width="20%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Department:
+								</td>
+								<td width="20%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Date/Time Requested:
+										<span t-field="o.request_date"/>
+								</td>
+								<td width="20%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Date Required:
+										<span t-field="o.schedule_date"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<br/>
+				
+					<div class="row align-center">
+						<table style="width: 100%; border:1px solid black; border:1px solid black; text-align: left; vertical-align: middle;background-color:#000000;">
+						<tbody>
+							<tr>
+  						  <th>
+									 <font color="#ffffff">Work Order (To be filled up by the receiving party)</font>
+								</th>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+					<br/>
+					
+					<div class="row align-center">
+					<table style="width: 100%; border:1px solid black;">
+  					<tbody>
+    					<tr>
+      						<th scope="col" width="25%" style="text-align: left;">Descreption of Work Performed:</th>
+    				  	</tr>
+    				  
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  
+    				  <tr>
+      					<th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+      					</tr>
+      				
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;">Recommendations:</th>
+    				  </tr>
+    				  
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+  					</tbody>
+					</table>
+					</div>
+					
+					<div class="row align-center">
+						<table style="width: 100%; border:1px solid black;">
+  					<tbody>
+    					<tr>
+      					 <th scope="col" width="25%" style="text-align: left;" colspan="5">Spare parts/materials used:</th>
+    				  </tr>
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left">SN</th>
+      					 <th scope="col" width="25%" style="text-align: left">Qty</th>
+      					 <th scope="col" width="25%" style="text-align: left">Unit</th>
+      					 <th scope="col" width="25%" style="text-align: left">Part No.</th>
+      					 <th scope="col" width="25%" style="text-align: left">Description</th>
+    				  </tr>
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+    				  <tr>
+      					 <th scope="col" width="25%" style="text-align: left; border-top: dotted 1px;"> </th>
+    				  </tr>
+  					</tbody>
+						</table>
+					</div>
+					<br/>
+					
+				<div class="footer">
+				<div class="row mb-5">
+				  
+					<table style="width: 100%; border-collapse: collapse; border: 0.0355rem solid black;  margin-top: 0.25rem;">
+						<tbody>
+							<tr style="font-size: 0.875rem; text-align: center;">
+								<td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Form No.: GTC-F-11
+								</td>
+								<td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+									Rev.: 01
+								</td>
+								<td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Date: 23.04.2012
+								</td>
+								<td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+										Page: <span class="page"/> / <span class="topage"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+        </div>
+			</div>
+			</t>
+
+		</t>
+	</template>
+
+
+	<!--><template id="report_deliveryslip">
+
+		<t t-foreach="docs" t-as="o">
+			<t t-call="gtc.report_delivery_document" t-lang="o.partner_id.lang"/>
+		</t>
+
+	</template><!-->
+
+	 <report
+			string="Work Order Request"
+			id="action_report_wo_request"
+			model="maintenance.request"
+			report_type="qweb-pdf"
+			name="gtc.report_wo_request"
+			file="gtc.report_wo_request"
+			print_report_name="'Work Order - %s - %s'"/>
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>	
+	<record id="popup_message_wizard" model="ir.ui.view">
+		<field name="name">popup.message.wizard</field>
+		<field name="model">popup.message.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Message">
+				<field name="name"/>
+				<footer>
+					<button string="OK" class="btn-primary" special="cancel" />
+				</footer>				
+							
+			</form>
+		</field>	
+	</record>
+
+	<record id="view_partner_form_vehicle" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <page name="internal_notes" position="after">
+                <page string="Vehicles Interest" >
+                	<field name="vehicles_interest" mode="tree"  >
+                        <form string="Vehicles Interest">
+                            <group>
+                            	<field name="brand_id"/>
+                            	<field domain="[('brand_id', '=', brand_id)]" name="class_id"/>
+                            	<field domain="[('class_id', '=', class_id)]" name="model_id"/>
+                            </group>
+                        </form>
+                        <tree string="Vehicles Interest" editable="bottom" >
+                            <field name="brand_id"/>
+                        	<field domain="[('brand_id', '=', brand_id)]" name="class_id"/>
+                        	<field domain="[('class_id', '=', class_id)]" name="model_id"/>
+                        </tree>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+
+	<record id="view_partner_tree_vehicle" model="ir.ui.view">
+        <field name="name">res.partner.tree</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <field name="email" position="after">
+   				 <field name="vehicles_interest" widget="many2many_tags"/>
+            </field>
+        </field>
+    </record>
+
+	<record id="view_company_form_vehicle" model="ir.ui.view">
+        <field name="name">res.company.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <field name="currency_id" position="before">
+   				 <field name="interval_number"/>
+        	</field>
+    	</field>
+    </record>
+
+</data>
+</odoo>

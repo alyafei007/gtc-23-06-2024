@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        
+        <!-- Inherit Product Template Form View -->
+	 	<record id="product_template_form_view_maintenance_inherit" model="ir.ui.view">
+			<field name="name">product.template.form.view.maintenance.inherit</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_form_view"/>
+			<field name="arch" type="xml">
+            	<xpath expr="//field[@name='categ_id']" position="after">
+					 <field name="maintenance_ids" widget="many2many_tags" />                         
+                </xpath>
+            </field>
+        </record>
+        
+        <!-- Inherit Maintenance Equipment Form View -->
+	 	<record id="hr_equipment_view_form_product_inherit" model="ir.ui.view">
+			<field name="name">hr.equipment.view.form.product.inherit</field>
+			<field name="model">maintenance.equipment</field>
+			<field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+			<field name="arch" type="xml">
+            	<xpath expr="//div[@name='button_box']" position="inside">
+					 <button name="show_product_template"
+                            type="object"
+                            class="oe_stat_button"                            
+                            icon="fa-bars">
+                            <span>Spare Parts</span>
+                        </button>                        
+                </xpath>
+            </field>
+        </record>
+</odoo>

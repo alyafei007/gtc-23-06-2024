@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="gtc.payment_memo_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" style="margin-left: 0px; margin-right: 0px;">
+                    <table class="table table-sm o_main_table"><!--style="width: 100%; table-collapse: collapse; border: 0.0355rem solid black;">-->
+                        <tbody>
+                            <tr>
+                                <td width="20%"
+                                    style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;"
+                                    rowspan="2">
+                                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"
+                                         style="width: auto; height: auto;  max-height: 100px;" alt="Logo"/>
+                                </td>
+                                <td style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;">
+                                    Gulf Tunneling Company - LLC
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;">
+                                    Payment Memo
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <style>
+                    table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 1.125rem;
+                    font-family: Calibri;
+                    margin: 2rem 0;
+                    }
+
+                    table, th, td {
+                    border: 0.0355rem solid black;
+                    vertical-align: middle;
+                    height: 30;
+                    }
+
+                    table th { font-size: 1rem; padding: 0.50rem 0.5rem;}
+                    <!-->table th { font-size: 0.750rem; padding: 0.25rem 0.5rem; text-transform: uppercase; }<!-->
+                    table td { padding: 0.50rem 0.5rem; }
+                </style>
+
+                <div class="page article o_report_layout_boxed">
+                    <div class="oe_structure"/>
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+                            <tr class="border-black">
+                                <td class="font-weight-bold" width="15%">
+                                    <strong>Date</strong>
+                                </td>
+                                <td width="40%">
+                                    <span t-field="o.invoice_date"
+                                          t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
+                                </td>
+                                <td class="font-weight-bold" width="15%">
+                                    <strong>PM No.</strong>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.pm_no"/>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>From</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.po_no.requisition_id.department_id.name"/>
+                                </td>
+                                <td class="font-weight-bold">
+                                    <strong>PO No.</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.po_no.name"/>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>To</strong>
+                                </td>
+                                <td>
+                                    Finance Department
+                                </td>
+                                <td class="font-weight-bold">
+                                    <strong>Project</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.stock_move_id.name"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>Payment to</strong>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <span t-field="o.partner_id"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>Supplier Account No.</strong>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <span t-field="o.partner_id.property_account_payable_id"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+
+                            <tr style="border:1px solid black;">
+                                <td class="font-weight-bold">
+                                    <strong>Payment for</strong>
+                                </td>
+                            </tr>
+
+                            <tr><!--</tr> t-foreach="o.invoice_line_ids" t-as="line">-->
+
+                                <td class="font-weight-bold">
+                                    <span t-foreach="o.invoice_line_ids" t-as="line">
+                                        <span t-field="line.product_id.name"/>,
+                                    </span>
+                                    <!--<span t-field="line.product_id.name"/>-->
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>Payment Amount</strong>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <span t-field="o.amount_total"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>Payment Terms</strong>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <span t-field="o.invoice_payment_term_id"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>Payment Mode</strong>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <br/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>Due Date</strong>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <span t-field="o.invoice_date_due"
+                                          t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>Remarks</strong>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <t t-if="o.narration  is False">
+                                        <br/>
+                                    </t>
+
+                                    <t t-else="">
+                                        <span t-field="o.narration"/>
+                                    </t>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-sm o_main_table">
+                        <tbody>
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    <strong>Enclosed Document(s):</strong>
+                                </td>
+                            </tr>
+
+                            <tr class="border-black">
+                                <td class="font-weight-bold">
+                                    PR No. :
+                                    <span t-field="o.po_no.requisition_id.name"/>
+                                    <br/>
+                                    Po No. :
+                                    <span t-field="o.po_no.name"/>
+                                    <br/>
+                                    Invoice:
+                                    <span t-field="o.ref"/>
+                                    <br/>
+                                    PM :
+                                    <span t-field="o.pm_no"/>
+                                    <br/>
+                                    Reciept Voucher :
+                                    <t t-foreach="o.po_no.picking_ids" t-as="value">
+                                      <span t-field="value.name"/>,
+                                    </t>.
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="oe_structure"/>
+                </div>
+
+                <div class="footer">
+
+                    <table style="width: 100%; border-collapse: collapse; border: 0.0355rem solid black;">
+                        <tbody>
+                            <tr style="height: 75px; font-size: 0.875rem; text-align: center;">
+                                <td width="25%" style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    Prepared by:
+                                </td>
+
+                                <td width="25%" style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    Noted by:
+                                </td>
+
+                                <td width="25%" style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    Noted by:
+                                </td>
+
+                                <td width="25%" style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    Approved by:
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr style="height: 25px; font-size: 0.750rem; text-align: center;">
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    <Strong>Purchase Officer</Strong>
+                                </td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    <Strong>Operations Manager</Strong>
+                                </td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    <Strong>Finance Manager</Strong>
+                                </td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    <Strong>General Manager</Strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- end signatures -->
+
+                    <br/>
+                    <table style="width: 100%; border-collapse: collapse; border: 0.0355rem solid black;  margin-top: 0.25rem;">
+                        <tbody>
+                            <tr style="font-size: 0.875rem; text-align: center;">
+                                <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                                    Form No: GTC-PU-F-03
+                                </td>
+                                <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                                    Rev: 03
+                                </td>
+                                <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                                    Date: 10.06.2018
+                                </td>
+                                <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                                    Page:
+                                    <span class="page"/>
+                                    /
+                                    <span class="topage"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <report
+            string="Payment Memo Report"
+            id="print_payment_memo_report"
+            model="account.move"
+            report_type="qweb-pdf"
+            name="gtc.payment_memo_report"
+            file="gtc.payment_memo_report"
+            print_report_name="'Payment Memo - %s' % (object.name)"
+    />
+
+</odoo>

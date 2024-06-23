@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_bid_evaluation">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <div class="header">
+                <div class="row mb-0 o_report_layout_boxed">
+                  <table class="table table-sm o_main_table">
+                    <tbody>
+                        <tr>
+                            <td width="20%" style="vertical-align: middle;">
+                                <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" width="100%" alt="Logo"/>
+                            </td>
+                            <td class="text-center" style="vertical-align: middle; padding: 0; margin: 0;">
+                                <h6 class="font-weight-bold" style="padding: 1rem 0;">Gulf Tunneling Company - LLC</h6>
+                                <span style="border-top: 1px solid black; display: block; padding: 0.10rem 0;" width="100%">Bid Evaluation</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- end brand -->
+                <div class="row">
+                  <table class="table table-sm o_main_table text-center" style="font-size: 0.875rem;">
+                    <tr>
+                      <td class="font-weight-bold" style="vertical-align: middle; border-top: none;">Requesting Dept.</td>
+                      <td style="vertical-align: middle; border-top: none; border: 1px solid black;">Operation</td>
+                      <td class="font-weight-bold" style="vertical-align: middle; border-top: none;">PR No.</td>
+                      <td style="vertical-align: middle; border-top: none; border: 1px solid black;">OP 490</td>
+                      <td class="font-weight-bold" style="vertical-align: middle; border-top: none;">Project No.</td>
+                      <td style="vertical-align: middle; border-top: none; border: 1px solid black;">O-12733</td>
+                      <td class="font-weight-bold" style="vertical-align: middle; border-top: none;">Reqd. Date</td>
+                      <td style="vertical-align: middle; border-top: none; border: 1px solid black;">07/10/2019</td>
+                      <td class="font-weight-bold" style="vertical-align: middle; border-top: none;">Date</td>
+                      <td style="vertical-align: middle; border-top: none; border: 1px solid black;">10/07/2019</td>
+                    </tr>
+                  </table>
+                </div>
+            </div> 
+            <!-- end header -->
+            <div class="page">
+              <div class="row" style="margin-bottom: 1rem;">
+                <table style="display: table; width: 100%; border-collapse: collapse; font-size: 0.875rem;">
+                  <thead style="font-size: 0.750rem; font-weight: 700;">
+                    <tr>
+                      <th rowspan="3" width="5%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Item No.</th>
+                      <th rowspan="3" width="25%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Description</th>
+                      <th rowspan="3" width="5%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Item Code</th>
+                      <th rowspan="3" width="5%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Last PO Unit Price</th>
+                      <th rowspan="3" width="5%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Qty</th>
+                      <th rowspan="3" width="5%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Unit</th>
+                      <th width="16.66%" class="text-center" style="border: 1px solid black; vertical-align: middle;" colspan="2">Supplier 1</th>
+                      <th width="16.66%" class="text-center" style="border: 1px solid black; vertical-align: middle;" colspan="2">Supplier 2</th>
+                      <th width="16.66%" class="text-center" style="border: 1px solid black; vertical-align: middle;" colspan="2">Supplier 3</th>
+                    </tr>
+                    <tr>
+                      <th colspan="2" height="24px" class="text-center" style="border: 1px solid black; vertical-align: middle;"></th>
+                      <th colspan="2" height="24px" class="text-center" style="border: 1px solid black; vertical-align: middle;"></th>
+                      <th colspan="2" height="24px" class="text-center" style="border: 1px solid black; vertical-align: middle;"></th>
+                    </tr>
+                    <tr>
+                      <th width="8.33%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Unit Price</th>
+                      <th width="8.33%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Total Amount</th>
+                      <th width="8.33%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Unit Price</th>
+                      <th width="8.33%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Total Amount</th>
+                      <th width="8.33%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Unit Price</th>
+                      <th width="8.33%" class="text-center" style="border: 1px solid black; vertical-align: middle;">Total Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">1</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: left;">2</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">5</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">6</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">7</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">8</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">9</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">10</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">11</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">12</td>
+                    </tr>
+                    <tr>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">1</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: left;">2</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">5</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">6</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">7</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">8</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">9</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">10</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">11</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">12</td>
+                    </tr>
+                    <tr>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">1</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: left;">2</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">5</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">6</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">7</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">8</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">9</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">10</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">11</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">12</td>
+                    </tr>
+                    <tr>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">1</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: left;">2</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">5</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">6</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">7</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">8</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">9</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">10</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">11</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">12</td>
+                    </tr>
+                    <tr>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">1</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: left;">2</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">5</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">6</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">7</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">8</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">9</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">10</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">11</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">12</td>
+                    </tr>
+                    <tr>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">1</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: left;">2</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">5</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">6</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">7</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">8</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">9</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">10</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">11</td>
+                      <td style="border: 1px solid black; vertical-align: middle; text-align: center;">12</td>
+                    </tr>
+                    <!-- end items -->
+                    <tr>
+                      <td colspan="6" style="border: 1px solid black; vertical-align: middle;">Total Amount:</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">2</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                    </tr>
+                    <!-- end total amount -->
+                    <tr>
+                      <td colspan="6" style="border: 1px solid black; vertical-align: middle;">VAT:</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">2</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                    </tr>
+                    <!-- end vat -->
+                    <tr>
+                      <td colspan="6" style="border: 1px solid black; vertical-align: middle;">Frieght:</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">2</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                    </tr>
+                    <!-- end frieght -->
+                    <tr>
+                      <td colspan="6" style="border: 1px solid black; vertical-align: middle;">Others:</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">2</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                    </tr>
+                    <!-- end others -->
+                    <tr>
+                      <td colspan="6" style="border: 1px solid black; vertical-align: middle; font-weight: 700; font-size: 0.750rem;">Grand Total:</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">2</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                    </tr>
+                    <!-- end grand total -->
+                    <tr>
+                      <td colspan="6" style="border: 1px solid black; vertical-align: middle;">Remarks:</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">2</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">3</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">4</td>
+                    </tr>
+                    <!-- end remarks -->
+                    <tr>
+                      <td colspan="6" style="border: 1px solid black; vertical-align: middle;">Delivery Terms:</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">Delivery to SIT</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">CREDIT CARD</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">As agreed</td>
+                    </tr>
+                    <!-- end delivery terms -->
+                    <tr>
+                      <td colspan="6" style="border: 1px solid black; vertical-align: middle;">Payment Terms:</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">Delivery to SIT</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">CREDIT CARD</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">As agreed</td>
+                    </tr>
+                    <!-- end payment terms -->
+                    <tr>
+                      <td colspan="6" style="border: 1px solid black; vertical-align: middle;">Delivery Period/Time:</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">Delivery to SIT</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">Cash</td>
+                      <td colspan="2" style="border: 1px solid black; vertical-align: middle; text-align: center;">As agreed</td>
+                    </tr>
+                    <!-- end delivery period/time -->
+                    <tr>
+                      <td colspan="12" height="16px"></td>
+                    </tr>
+                    <!-- cut the tr -->
+                    <tr>
+                      <td colspan="12" style="border: 1px solid black; vertical-align: middle; font-size: 0.750rem; font-weight: 700;">Recommended Supplier: SAFEWAY</td>
+                    </tr>
+                    <!-- end -->
+                    <tr>
+                      <td colspan="12" style="border: 1px solid black; vertical-align: middle; font-size: 0.750rem; font-weight: 700;">Reasons for recommendation: Lowest price</td>
+                    </tr>
+                    <!-- end -->
+                    <tr>
+                      <td colspan="12" height="16px" style="border: 1px solid black;"></td>
+                    </tr>
+                    <!-- end empty tr -->
+                    <tr>
+                      <td colspan="12" height="16px" style="border: 1px solid black;"></td>
+                    </tr>
+                    <!-- end empty tr -->
+                    <tr>
+                      <td colspan="12" style="border: 1px solid black; vertical-align: middle; font-size: 0.750rem; font-weight: 700;">Remarks:</td>
+                    </tr>
+                    <!-- end remarks -->
+                    <tr>
+                      <td colspan="12" height="16px" style="border: 1px solid black;"></td>
+                    </tr>
+                    <!-- end empty tr -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- end row -->
+              <div class="row">
+                <table style="display: table; width: 100%; border-collapse: collapse; font-size: 0.875rem;">
+                  <tr>
+                    <td width="33.33%" style="border: 1px solid black;">
+                      <span style="font-weight: 700; font-size: 0.875rem; padding-bottom: 1.5rem; display: block;">Prepared by:</span>
+                      <span style="display: block; position: relative;">
+                        <span style="border-top: 1px solid black; width: 40%; display: inline-block; margin-right: 29%;">Purchase Officer</span>
+                        <span style="border-top: 1px solid black; width: 30%; display: inline-block;">Date</span>
+                      </span>
+                    </td>
+                    <td width="33.33%" style="border: 1px solid black;">
+                      <span style="font-weight: 700; font-size: 0.875rem; padding-bottom: 1.5rem; display: block;">Noted by:</span>
+                      <span style="display: block; position: relative;">
+                        <span style="border-top: 1px solid black; width: 40%; display: inline-block; margin-right: 29%;">Finance Manager</span>
+                        <span style="border-top: 1px solid black; width: 30%; display: inline-block;">Date</span>
+                      </span>
+                    </td>
+                    <td width="33.33%" style="border: 1px solid black;">
+                      <span style="font-weight: 700; font-size: 0.875rem; padding-bottom: 1.5rem; display: block;">Approved by:</span>
+                      <span style="display: block; position: relative;">
+                        <span style="border-top: 1px solid black; width: 40%; display: inline-block; margin-right: 29%;">General Manager</span>
+                        <span style="border-top: 1px solid black; width: 30%; display: inline-block;">Date</span>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!-- end signature required -->
+            </div>
+            <!-- end page -->
+            
+            <div class="footer">
+              <div class="row">
+                <table style="display: table; width: 100%; border-collapse: collapse; font-size: 0.875rem; text-align: center;">
+                  <tr>
+                    <td width="25%" style="vertical-align: middle; border: 1px solid black;">Form No: GTC-PU-F-05</td>
+                    <td width="25%" style="vertical-align: middle; border: 1px solid black;">Rev: 01</td>
+                    <td width="25%" style="vertical-align: middle; border: 1px solid black;">Date: 24.06.2015</td>
+                    <td width="25%" style="vertical-align: middle; border: 1px solid black;">Page 1 of 1</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+        </t>
+    </t>
+</template>
+</odoo>

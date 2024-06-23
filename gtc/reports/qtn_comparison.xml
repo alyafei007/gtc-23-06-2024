@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="gtc.report_purchaserequisitions_comparison">
+      <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <div class="header">
+              <table style="width: 100%; table-collapse: collapse; border: 0.0355rem solid black;">
+                <tbody>
+                  <tr>
+                    <td width="20%" style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;" rowspan="2">
+                      <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="width: auto; height: auto;  max-height: 100px;" alt="Logo"/>
+                    </td>
+                    <td style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;">Gulf Tunneling Company - LLC</td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;">Qoutation Comparison</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+         <!-- end header -->
+          <div class="page">
+            <xpath expr="." position="inside">
+              <style>
+                table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  font-size: 0.875rem;
+                  margin: 2rem 0;
+                }
+                
+                table, th, td {
+                  border: 0.0355rem solid black;
+                  text-align: center;
+                  vertical-align: middle;
+                }
+                
+                table th { font-size: 0.750rem; padding: 0.25rem 0.5rem; }<!-->table th { font-size: 0.750rem; padding: 0.25rem 0.5rem; text-transform: uppercase; }<!-->
+                table td { padding: 0.25rem 0.5rem; }
+              </style>
+            </xpath>
+            <!-- end style -->
+            
+            <table class="mytable" style="font-size: 0.875rem;">
+              <tbody>
+                <tr>
+                  <td class="text-left" width="33.33%">
+                    <span class="font-weight-bold"> &#160; <strong>Department:</strong> </span> <span t-field="o.department_id"/>
+                  </td>
+                  <td class="text-left" width="33.33%">
+                    <span class="font-weight-bold"> &#160; <strong>Date:</strong> </span> <span t-field="o.ordering_date"/>
+                  </td>
+                  <td class="text-left" width="33.33%">
+                    <span class="font-weight-bold"> &#160; <strong>PR No.:</strong> </span> <span t-field="o.name"/>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- end departments etc... -->
+          </div>
+                        
+                        <t t-if="o.purchase_ids">
+                           <t t-foreach="o.purchase_ids" t-as="purchase_id">
+
+                              <!--<table>
+                                  <div t-if="purchase_id.name">
+                                    <strong>Quotation Reference :</strong>
+                                    <span t-field="purchase_id.name"/>
+                                  </div>
+
+                                  <div t-if="purchase_id.date_order">
+                                    <strong>Order Date :</strong>
+                                    <span t-field="purchase_id.date_order" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
+                                  </div>
+                                
+                                  <div t-if="purchase_id.partner_id">
+                                    <strong>Vendor :</strong>
+                                    <span t-field="purchase_id.partner_id"/>
+                                  </div>
+                                
+                                  <div t-if="purchase_id.partner_ref">
+                                    <strong>Vendor Quotation Reference :</strong>
+                                    <span t-field="purchase_id.partner_ref"/>
+                                  </div>
+                                
+                              </table>-->
+                              
+                              <table style="border-collapse: collapse; border: none;">
+                                <tbody>
+                                  <tr>
+                                    <td width="30%" style="text-align: left; font-weight:bold; border: none;">Quotation Reference :</td>
+                                    <td width="70%" style="text-align: left; border: none;"><span t-field="purchase_id.name"/></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td width="30%" style="text-align: left; font-weight:bold; border: none;">Order Date :</td>
+                                    <td width="70%" style="text-align: left; border: none;"><span t-field="purchase_id.date_order" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td width="30%" style="text-align: left; font-weight:bold; border: none;">Vendor :</td>
+                                    <td width="70%" style="text-align: left; border: none;"><span t-field="purchase_id.partner_id"/></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td width="30%" style="text-align: left; font-weight:bold; border: none;">Vendor Quotation Reference :</td>
+                                    <td width="70%" style="text-align: left; border: none;"><span t-field="purchase_id.partner_ref"/></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+
+
+                 
+                              <table>
+                                  <thead>
+                                      <tr bgcolor="#D4D4D4">
+                                          <th align= "center"><strong>#</strong></th>
+                                          <th style="text-align: left;"><strong>Description</strong></th>
+                                          <th align= "center"><strong>Unit</strong></th>
+                                          <th align= "center"><strong>Qty</strong></th>
+                                          <th align= "center"><strong>Price</strong></th>
+                                          <th align= "center"><strong>Amount</strong></th>
+                                          <th align= "center"><strong>Vat 5%</strong></th>
+                                          <th align= "center"><strong>Gross</strong></th>
+                                      </tr>
+                                  </thead>
+                                  
+                                  <tbody>
+                                      <t t-set="i" t-value="1"/>
+                                        <tr t-foreach="purchase_id.order_line" t-as="line">
+                                            
+                                            <td>
+                                              <span t-esc="i"/>
+                                            </td>
+        
+                                            <td style="text-align: left;">
+                                                <span t-field="line.name"/>
+                                            </td>
+                                            
+                                            <td class="text-center">
+                                                <span t-field="line.product_uom.name" groups="uom.group_uom"/>
+                                            </td>
+                                             <td class="text-center">
+                                                <span t-field="line.product_qty"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-field="line.price_unit"/>
+                                            </td>
+                                            <td lass="text-center">
+                                                <span t-field="line.price_subtotal" t-options="{&quot;widget&quot;: &quot;False&quot;}"/>
+                                            </td>
+                                            
+                                            <td class="text-center">
+                                              <span t-field="line.price_tax"/>
+                                            </td>
+                                            <td class="text-center">
+                                              <span t-field="line.price_total" t-options="{&quot;widget&quot;: &quot;False&quot;}"/>
+                                            </td>
+                                            <t t-set="i" t-value="1+i"/>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                  
+                              <table style="border-collapse: collapse; border: none;">
+                                <tr>
+                                  <td width="82%" style="text-align: right; border: none;"><strong>Subtotal:</strong></td>
+                                  <td bgcolor="#F0F0F0" width="18%" style="text-align: right; border: none;">
+                                      <span t-field="purchase_id.amount_untaxed" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: purchase_id.currency_id}"/>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td width="82%" style="text-align: right; border: none;"><strong>Taxes:</strong></td>
+                                  <td bgcolor="#F0F0F0" width="18%" style="text-align: right; border: none;">
+                                    <span t-field="purchase_id.amount_tax" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: purchase_id.currency_id}"/>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td width="82%" style="text-align: right; border: none;"><strong>Total:</strong></td>
+                                  <td bgcolor="#F0F0F0" width="18%" style="text-align: right; border: none;">
+                                    <span t-field="purchase_id.amount_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: purchase_id.currency_id}"/>
+                                  </td>
+                                </tr>
+                              </table>
+                          
+                              <p  style="text-align: center;">-------------------- * * * * * -------------------- * * * * * -------------------- * * * * * -------------------- </p>
+                              <br/>
+                            </t>
+                        </t>
+        </t>
+      </t>
+  </template>
+
+  <report 
+        string="Quotation Comparison" 
+        id="print_purchase_requisitions_comparison" 
+        model="purchase.requisition" 
+        report_type="qweb-pdf"
+        name="gtc.report_purchaserequisitions_comparison" 
+        file="gtc.report_purchaserequisitions_comparison"
+        print_report_name="'Quotation Comparison - %s' % (object.name)"
+    />
+
+</odoo>

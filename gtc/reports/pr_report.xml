@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="gtc.report_purchaserequisitions">
+    <t t-call="web.html_container">   
+    	<t t-call="gtc.internal_layout">
+        <t t-foreach="docs" t-as="o">
+          <div class="header">
+            <table style="width: 100%; table-collapse: collapse; border: 0.0355rem solid black;">
+              <tbody>
+                <tr>
+                  <td width="20%" style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;" rowspan="2">
+                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="width: auto; height: auto;  max-height: 100px;" alt="Logo"/>
+                  </td>
+                  <td style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;">Gulf Tunneling Company - LLC</td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;">Material Purchase Requisition Form</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br/><br/>
+          <!-- end header -->
+          <div class="page">
+            <xpath expr="." position="inside">
+              <style>
+                table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  font-size: 0.875rem;
+                  margin: 2rem 0;
+                }
+
+                table, th, td {
+                  border: 0.0355rem solid black;
+                  text-align: center;
+                  vertical-align: middle;
+                }
+
+                table th { font-size: 0.750rem; padding: 0.25rem 0.5rem; }<!-->table th { font-size: 0.750rem; padding: 0.25rem 0.5rem; text-transform: uppercase; }<!-->
+                table td { padding: 0.25rem 0.5rem; }
+              </style>
+            </xpath>
+            <!-- end style -->
+
+            <table>
+              <tbody>
+                <tr>
+                  <td class="text-left" width="33.33%">
+                    <span class="font-weight-bold">   Department: </span> <span t-field="o.department_id"/>
+                  </td>
+                  <td class="text-left" width="33.33%">
+                    <span class="font-weight-bold">   Date: </span> <span t-field="o.ordering_date"/>
+                  </td>
+                  <td class="text-left" width="33.33%">
+                    <span class="font-weight-bold">   PR No.: </span> <span t-field="o.name"/>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- end departments etc... -->
+
+            <t t-if="o.line_ids">
+              <table>
+                <thead>
+                  <tr>
+                    <th><strong>Item No.</strong></th>
+                    <th style="text-align: left;"><strong>Item Description</strong></th>
+                    <th><strong>Brand</strong></th>
+                    <th><strong>Part No.</strong></th>
+                    <th><strong>Qty</strong></th>
+                    <th groups="uom.group_uom"><strong>Unit</strong></th>
+                    <th class="text-center"><strong>Project</strong></th>
+                    <th class="text-center"><strong>Category</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <t t-set="i" t-value="1"/>
+                    <tr t-foreach="o.line_ids" t-as="line_ids">
+                      <td><span t-esc="i"/></td>
+                      <td style="text-align: left;">&#160;
+                          [ <span t-field="line_ids.product_id.code"/> ]
+                          <span t-field="line_ids.product_id.name"/>
+                      </td>
+                      <td class="text-center">
+                          <span t-field="line_ids.brand"/>
+                      </td>
+                      <td class="text-center">
+                          <span t-field="line_ids.part_no"/>
+                      </td>
+                      <td class="text-center">
+                          <span t-field="line_ids.product_qty"/>
+                      </td>
+                      <t>
+                          <td class="text-center" groups="uom.group_uom">
+                              <span t-field="line_ids.product_uom_id.name"/>
+                          </td>
+                      </t>
+                      <td class="text-center">
+                          <span t-field="line_ids.account_analytic_id"/>
+                      </td>
+                      <td class="text-center">
+                          <span t-field="line_ids.categ_id"/>
+                      </td>
+
+                      <t t-set="i" t-value="1+i"/>
+                    </tr>
+                </tbody>
+              </table>
+            </t>
+            <!-- end items -->
+
+            <table>
+              <thead>
+                <tr>
+                  <th class="text-left" colspan="3"><strong>Justification:</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-left" colspan="3"><span t-field="o.justification"/></td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th class="text-left" width="45%"><strong>Recommendation:</strong></th>
+                  <th class="text-left" width="45%"><strong>Supplier:</strong></th>
+                  <th><strong>Approval:</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-left" style="vertical-align: baseline;"><span t-field="o.recommendation"/></td>
+                  <td/>
+                  <td>
+                    <p>
+                      <input type="checkbox" value="yes"/> Yes<br/>
+                      <input type="checkbox" value="no"/> No
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- end page -->
+
+          <div class="footer">
+            <table style="width: 100%; border-collapse: collapse; border: 0.0355rem solid black;">
+              <tbody>
+                  <tr style="height: 50px; font-size: 0.875rem;">
+                    <td width="16.6%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Requested By</td>
+                    <td width="16.6%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Checked By</td>
+                    <td width="16.6%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Revised By</td>
+                    <td width="16.6%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Approved By</td>
+                    <td width="16.6%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Approved By</td>
+                    <td style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Noted By</td>
+                  </tr>
+              </tbody>
+              <tbody>
+                <tr style="font-size: 0.750rem; text-align: center;">
+                  <td style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Department Head</td>
+                  <td style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Storekeeper</td>
+                  <td style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Purchase Officer</td>
+                  <td style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Operations Manager</td>
+                  <td style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Genaral Manager</td>
+                  <td style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">Finance Manager</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- end signatures -->
+            <table style="width: 100%; border-collapse: collapse; border: 0.0355rem solid black; margin-top: 0.25rem;">
+              <tbody>
+                <tr style="font-size: 0.875rem; text-align: center;">
+                  <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                    Form No: GTC-PU-F-01
+                  </td>
+                  <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                    Rev: 07
+                  </td>
+                  <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                    Date: 19.11.2018
+                  </td>
+                  <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                    Page: <span class="page"/> / <span class="topage"/>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </t>
+	</t>
+    </t> 
+  </template>
+
+  <!--><template id="report_purchaserequisitions">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="purchase_requisitions" t-lang="o.partner_id.lang"/>
+      </t>
+    </t>
+  </template><!-->
+  <report 
+    string="Purchase Requisition" 
+    id="print_purchase_requisition" 
+    model="purchase.requisition" 
+    report_type="qweb-pdf"
+    name="gtc.report_purchaserequisitions" 
+    file="gtc.report_purchaserequisitions"
+    print_report_name="'PR - %s' % (object.name)"
+    paperformat="purchase_requisition_paperformat"/>
+</odoo>

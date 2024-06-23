@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Payment Memo Summary Report-->
+
+    <template id="gtc.pm_summary_report">
+        <t t-call="web.html_container">
+            
+		<div class="header">
+                    <table style="width: 100%; table-collapse: collapse; border: 0.0355rem solid black;">
+                        <tbody>
+                            <tr>
+                                <td width="20%" style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;" rowspan="2">
+                                    <img t-if="docs.company_id.logo" t-att-src="image_data_uri(docs.company_id.logo)" style="width: auto; height: auto;  max-height: 100px;" alt="Logo"/>
+                                </td>
+                                <td style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;">
+                                    Gulf Tunneling Company - LLC
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;">
+                                    Payment Memo Summary
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                  <!--</t>-->
+
+            <style>
+                table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.875rem;
+                margin: 2rem 0;
+                }
+
+                table, th, td {
+                border: 0.0355rem solid black;
+                vertical-align: middle;
+                }
+
+                table th { font-size: 0.750rem; padding: 0.25rem 0.5rem;
+                }<!-->table th { font-size: 0.750rem; padding: 0.25rem 0.5rem; text-transform: uppercase; }<!-->
+                table td { padding: 0.25rem 0.5rem; }
+            </style>
+
+            <table style="width=100%; border-collapse:collapse;  border: 0.0355rem solid black;">
+                <!-- class="table table-sm mt48" t-if="o.invoice_line_ids and o.state=='posted'"-->
+                <thead>
+                    <tr>
+                        <th class="text-center" width="5%">
+                            <strong>SN.</strong>
+                        </th>
+                        <th class="text-center" width="8%">
+                            <strong>Invoice No.</strong>
+                        </th>
+                        <th class="text-center" width="8%">
+                            <strong>Date of Inv</strong>
+                        </th>
+                        <th class="text-center" width="8%">
+                            <strong>Code Acc</strong>
+                        </th>
+                        <th class="text-center" width="8%">
+                            <strong>PO</strong>
+                        </th>
+                        <th class="text-center" width="8%">
+                            <strong>PM</strong>
+                        </th>
+                        <th class="text-left" width="15%">
+                            <strong>Supplier Name</strong>
+                        </th>
+                        <th class="text-left" width="20%">
+                            <strong>Description</strong>
+                        </th>
+                        <th class="text-center" width="8%">
+                            <strong>Amount</strong>
+                        </th>
+                        <th class="text-center" width="8%">
+                            <strong>Date</strong>
+                        </th>
+                        <th class="text-center" width="12%">
+                            <strong>Remarks</strong>
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-set="i" t-value="1"/>
+                    <t t-foreach="docs" t-as="o">
+                        <tr>
+                            <td style="text-align: center; width=3%">
+                                <span t-esc="i"/>
+                            </td>
+                            <td style="text-align: center; width=7%">
+                                <span t-field="o.ref"/>
+                            </td>
+                            <td style="text-align: center; width=7%">
+                                <span t-field="o.invoice_date" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
+                            </td>
+                            <td style="text-align: center; width=7%">
+                                <span t-field="o.partner_id.property_account_payable_id.code"/>
+                            </td>
+                            <td style="text-align: center; width=8%">
+                                <span t-field="o.po_no"/>
+                            </td>
+                            <td style="text-align: center; width=8%">
+                                <span t-field="o.pm_no"/>
+                            </td>
+                            <td style="text-align: left; width=15%">
+                                 
+                                <span t-field="o.invoice_partner_display_name"/>
+                            </td>
+
+                            <td style="text-align: left; width=20%">
+                                 
+                                <span t-foreach="o.invoice_line_ids" t-as="line">
+                                    <span t-field="line.product_id.name"/>,
+                                </span>
+                            </td>
+
+                            <td style="text-align: center; width=8%">
+                                <span t-field="o.amount_total"/>
+                            </td>
+                            <td style="text-align: center; width=7%">
+                                <span t-field="o.invoice_date_due" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
+                            </td>
+                            <td style="text-align: center; width=10%">
+                                <span t-field="o.narration"/>
+                            </td>
+                            <t t-set="i" t-value="1+i"/>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+		
+
+        </t>
+    </template>
+
+
+    <report
+            string="Payment Memo Summary"
+            id="pm_summary_report"
+            model="account.move"
+            report_type="qweb-pdf"
+            name="gtc.pm_summary_report"
+            file="gtc.pm_summary_report"
+            print_report_name="'Payment Memo Summary - %s' % (object.name)"
+	    paperformat="landscape_paperformat"
+    />
+
+</odoo>

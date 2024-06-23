@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="gtc.report_purchaseorder">
+        <t t-call="web.html_container">
+            
+		<t t-foreach="docs" t-as="o">
+                <div class="header">
+                    <div class="row mb-0 o_report_layout_boxed">
+                        <table class="table table-sm o_main_table">
+                            <tbody>
+                                <tr>
+                                    <td width="20%" style="vertical-align: middle; text-align: center; border: 0.0355rem solid black;" rowspan="2">
+                                        <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="width: auto; height: auto;  max-height: 100px;" alt="Logo"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <h6 class="font-weight-bold">Gulf Tunneling Company - LLC</h6>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        P.O Box 73622, ICAD-1, Mussafah, Abu Dhabi, UAE
+                                        <br/>
+                                        Tel: +971-2-25503327, Fax: +971-2-5503358
+                                        <br/>
+                                        Email: gulftunn@emirates.net.ae, Website: www.gulf-tunneling.com
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+
+                <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+
+                <div class="page article o_report_layout_boxed">
+                    <div class="oe_structure"/>
+                    <div class="row align-middle">
+                        <div t-if="o.name" class="col-6">
+                            <h9>GTC Tax Reg. No. :</h9>
+                            <span t-field="o.company_id.vat"/>
+                        </div>
+                        <div class="col-6 table table-sm table-striped">
+                            <span style="background-color: #d3d3d3">
+                                <font color="red">
+                                    <strong>Purchase Order</strong>
+                                </font>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <table class="table table-sm o_main_table">
+                            <tbody>
+                                <tr class="border-black">
+                                    <td class="font-weight-bold">Supplier</td>
+                                    <td>
+                                        <t t-if="o.partner_id.parent_id">
+                                            <span t-field="o.partner_id.parent_id.name"/>
+                                        </t>
+                                        <t t-else="">
+                                            <span t-field="o.partner_id.name"/>
+                                        </t>
+                                    </td>
+                                    <td class="font-weight-bold">Supplier's Acct. No.</td>
+                                    <td/>
+                                </tr>
+                                <tr class="border-black">
+                                    <td class="font-weight-bold">Tax Reg. No</td>
+                                    <td>
+                                        <t t-if="o.partner_id.vat">
+                                            <t t-esc="o.company_id.country_id.vat_label or 'Tax Reg. No.'"/>
+                                            :
+                                            <span t-field="o.partner_id.vat"/>
+                                        </t>
+                                    </td>
+                                    <td class="font-weight-bold">PO No.</td>
+                                    <td>
+                                        <span t-field="o.name"/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black">
+                                    <td class="font-weight-bold">Address</td>
+                                    <td>
+                                        <span t-field="o.partner_id.street"/>
+                                    </td>
+                                    <td class="font-weight-bold">Date</td>
+                                    <td>
+                                        <span t-field="o.date_order" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black">
+                                    <td class="font-weight-bold">Tel. No.</td>
+                                    <td>
+                                        <span t-field="o.partner_id.phone"/>
+                                    </td>
+                                    <td class="font-weight-bold">QTN No.</td>
+                                    <td>
+                                      	<span t-field="o.partner_ref"/>
+                                        <!--<span t-field="o.rfq_name"/>-->
+                                    </td>
+                                </tr>
+                                <tr class="border-black">
+                                    <td class="font-weight-bold">Fax No.</td>
+                                    <td>
+                                        <span t-field="o.partner_id.fax_no"/>
+                                    </td>
+                                    <td class="font-weight-bold">PR No.</td>
+                                    <td>
+                                        <span t-field="o.origin"/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black">
+                                    <td class="font-weight-bold">Email</td>
+                                    <td>
+                                        <span t-field="o.partner_id.email"/>
+                                    </td>
+                                    <td rowspan="2" width="15%" class="font-weight-bold">Project</td>
+                                    <td rowspan="2">
+                                        <span t-field="o.project_id"/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black">
+                                    <td class="font-weight-bold">Attention</td>
+                                    <td/>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <table class="table table-sm o_main_table">
+                            <tbody>
+                                <tr>
+                                    <td width="70%" class="font-weight-bold">
+                                        Delivery Mode &amp; Address:
+                                    </td>
+                                    <td width="30%" class="font-weight-bold">Delivery Time:</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: 0;">
+                                        <span t-field="o.delivary_mod"/>
+                                    </td>
+                                    <td style="border-top: 0;">
+                                        <span t-field="o.date_planned"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- cannot remove this one -->
+                    <t t-if="o.dest_address_id"/>
+
+                    <div class="row">
+                        <table class="table table-sm o_main_table">
+                            <tbody>
+                                <tr>
+                                    <td class="text-center font-weight-bold">Item No</td>
+                                    <td class="text-left font-weight-bold">Item Descriptiton</td>
+                                    <td class="text-center font-weight-bold">PartNo</td>
+                                    <td class="text-center font-weight-bold">Unit</td>
+                                    <td class="text-center font-weight-bold">Qty</td>
+                                    <td class="text-center font-weight-bold">Price</td>
+                                    <td class="text-center font-weight-bold">Amount</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <t t-set="i" t-value="1"/>
+                                <tr t-foreach="o.order_line" t-as="line">
+                                    <td class="text-center">
+                                        <span t-esc="i"/>
+                                    </td>
+
+                                    <!--> <tr t-foreach="o.order_line" t-as="line">
+                                        <td class="text-center">
+                                            <span t-field="line.id"/>
+                                        </td><!-->
+                                    <td>
+                                         <span t-field="line.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.part_no"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.product_uom.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.product_qty"/>
+
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.price_unit"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.price_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+
+                                    </td>
+
+                                    <t t-set="i" t-value="1+i"/>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <table class="table table-sm o_main_table">
+                            <tbody>
+                                <tr>
+                                    <td width="86%" class="font-weight-bold text-right">
+                                        Sub-Total:
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_untaxed" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                    </td>
+                                </tr>
+                                <!--<tr>
+                                    <td width="86%" class="font-weight-bold text-right">Discount:</td>
+
+                                    <span t-field="o.discount"
+                                          t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"
+                                          attrs="{'invisible': [('o.discount', '=', False),]}"/>
+                                </tr>-->
+                                <tr>
+                                    <td width="86%" class="font-weight-bold text-right">Tax:</td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_tax" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <table class="table table-sm table-striped">
+                            <tbody>
+                                <tr>
+                                    <td width="14%" class="font-weight-bold text-left">Total (in words):</td>
+                                    <td width="64%">
+                                        <span t-field="o.total_in_words"/>
+                                    </td>
+                                    <td width="8%" class="font-weight-bold text-right">Gross:</td>
+                                    <td width="14%" class="text-right">
+                                        <span t-field="o.amount_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <table class="table table-sm o_main_table">
+                            <tbody>
+                                <tr class="border-black">
+                                    <td class="font-weight-bold border-bottom">Terms &amp; Conditions</td>
+                                </tr>
+                                <tr>
+                                    <td height="80">
+                                        <p t-if="o.payment_term_id">
+                                            <span t-field="o.payment_term_id.note"/>
+                                        </p>
+                                        <p t-if="not o.payment_term_id">
+                                            The payment note has not been specified
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <table class="table table-sm o_main_table">
+                            <tbody>
+                                <tr class="border-black">
+                                    <td class="font-weight-bold border-bottom">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                Is the supplier an "Approved Supplier?"
+                                            </div>
+                                            <div class="col-8">
+                                                <p t-if="o.partner_id.approved_supplier">
+                                                    <input type="checkbox" value="yes" checked="1"/>
+                                                    Yes
+                                                    <input type="checkbox" value="no"/>
+                                                    No
+                                                </p>
+                                                <p t-if="not o.partner_id.approved_supplier">
+                                                    <input type="checkbox" value="yes"/>
+                                                    Yes
+                                                    <input type="checkbox" value="no" checked="1"/>
+                                                    No
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        If <strong>"No"</strong> specify the reason making purchase:
+                                        <br/>
+                                        <span t-field="o.partner_id.not_approved_supplier"/>
+                                        <br/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p t-field="o.notes"/>
+                    <div class="oe_structure"/>
+                </div>
+
+
+                <div class="footer">
+
+                    <table style="width: 100%; border-collapse: collapse; border: 0.0355rem solid black;">
+                        <tbody>
+                            <tr style="height: 50px; font-size: 0.875rem; text-align: center;">
+                                <td width="20%" style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Prepared
+                                    by:
+                                </td>
+                                <td width="20%" style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Checked
+                                    by:
+                                </td>
+                                <td width="20%" style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Noted
+                                    by:
+                                </td>
+                                <td width="20%" style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Approved
+                                    by:
+                                </td>
+                                <td width="20%" style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Approved
+                                    By:
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr style="font-size: 0.750rem; text-align: center;">
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    <Strong>Purchase Officer</Strong>
+                                </td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    <Strong>Operations Manager</Strong>
+                                </td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    <Strong>Finance Managerr</Strong>
+                                </td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    <Strong>Genaral Manager</Strong>
+                                </td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">
+                                    <Strong>Managing Director</Strong>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr style="font-size: 0.750rem; text-align: left;">
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Date:</td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Date:</td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Date:</td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Date:</td>
+                                <td style="padding: 0.20rem 0.5rem; border: 0.0355rem solid black;">Date:</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- end signatures -->
+                    <table style="width: 100%; border-collapse: collapse; border: 0.0355rem solid black;  margin-top: 0.25rem;">
+                        <tbody>
+                            <tr style="font-size: 0.875rem; text-align: center;">
+                                <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                                    Form No: GTC-PU-F-02
+                                </td>
+                                <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                                    Rev: 07
+                                </td>
+                                <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                                    Date: 08.12.2018
+                                </td>
+                                <td width="25%" style="padding: 0.25rem 0.5rem; border: 0.0355rem solid black;">
+                                    Page:
+                                    <span class="page"/>
+                                    /
+                                    <span class="topage"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>            
+
+        </t>
+    </template>
+
+
+   <!--> <template id="report_purchaseorder">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="gtc.purchase_order" t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </template><!-->
+
+    <report 
+        string="Purchase Order" 
+        id="action_report_purchase_order" 
+        model="purchase.order" 
+        report_type="qweb-pdf"
+        name="gtc.report_purchaseorder" 
+        file="gtc.report_purchaseorder"
+        print_report_name="'PO - %s' % (object.name)"
+        paperformat="purchase_order_paperformat"
+    />
+</odoo>

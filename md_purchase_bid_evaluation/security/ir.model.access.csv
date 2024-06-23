@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_abtis_purchase_requisition_report_excel_extended,access.abtis.purchase.requisition.report.excel.extended,model_abtis_purchase_requisition_report_excel_extended,,1,1,1,1

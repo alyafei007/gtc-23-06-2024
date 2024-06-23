@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="abtis_purchase_requisition_form_view_inherit_excel_report" model="ir.ui.view">
+        <field name="name">abtis.purchase.requisition.form.view.inherit.excel.report</field>
+        <field name="model">purchase.requisition</field>
+        <field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="/form/header/button[@name='action_cancel']" position="after">
+                <button name="print_purchase_requisition_excel_report_abtis" type="object" string="Print Tenders" class="oe_highlight"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_abtis_purchase_requisition_report_excel_form_extended" model="ir.ui.view">
+        <field name="name">abtis.purchase.requisition.report.excel.extended.form</field>
+        <field name="model">abtis.purchase.requisition.report.excel.extended</field>
+        <field name="arch" type="xml">
+            <form string="Excel Report file">
+                <group>
+                    <field name="excel_file" readonly="1" filename="file_name"/>
+                    <field name="file_name" invisible="1"/>
+                </group>
+                <footer>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_abtis_purchase_requisition_report_excel_form" model="ir.actions.act_window">
+        <field name="name">Reports Excel</field>
+        <field name="view_id" ref="view_abtis_purchase_requisition_report_excel_form_extended"/>
+        <field name="view_mode">form</field>
+        <field name="res_model">abtis.purchase.requisition.report.excel.extended</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>
